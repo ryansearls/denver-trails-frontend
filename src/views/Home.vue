@@ -1,18 +1,36 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <h1>{{ message }}</h1>
+    <div v-for="trail in trails" v-bind:key="trail.id"></div>
+    <h2>Title: {{ trail.trail }}</h2>
+    <p>Location: {{ trail.location }}</p>
   </div>
 </template>
 
+<style></style>
+
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import axios from "axios";
 
 export default {
-  name: "Home",
-  components: {
-    HelloWorld,
+  data: function () {
+    return {
+      message: "Explore Denver Trails",
+      trails: [],
+    };
+  },
+
+  created: function () {
+    this.indexTrails();
+  },
+
+  methods: {
+    indexTrails: function () {
+      axios.get("http://localhost:3000/trails").then((response) => {
+        this.trails = response.data;
+        console.log("All Trails:", this.trails);
+      });
+    },
   },
 };
 </script>
