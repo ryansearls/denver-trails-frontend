@@ -2,8 +2,9 @@
   <div class="home">
     <h1>{{ message }}</h1>
     <div v-for="trail in trails" :key="trail.id">
-      <h2>Title: {{ trail.location }}</h2>
-      <p>Location: {{ trail.distance }}</p>
+      <h2>Title: {{ trail.name }}</h2>
+      <p>Location: {{ trail.location }}</p>
+      <p>Distance: {{ trail.distance }}</p>
     </div>
   </div>
 </template>
