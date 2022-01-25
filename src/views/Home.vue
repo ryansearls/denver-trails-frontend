@@ -1,9 +1,10 @@
 <template>
   <div class="home">
     <h1>{{ message }}</h1>
-    <div v-for="trail in trails" v-bind:key="trail.id"></div>
-    <h2>Title: {{ trail.trail }}</h2>
-    <p>Location: {{ trail.location }}</p>
+    <div v-for="trail in trails" :key="trail.id">
+      <h2>Title: {{ trail.location }}</h2>
+      <p>Location: {{ trail.distance }}</p>
+    </div>
   </div>
 </template>
 
@@ -26,7 +27,7 @@ export default {
 
   methods: {
     indexTrails: function () {
-      axios.get("http://localhost:3000/trails").then((response) => {
+      axios.get("/trails").then((response) => {
         this.trails = response.data;
         console.log("All Trails:", this.trails);
       });
