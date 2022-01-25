@@ -1,7 +1,7 @@
 <template>
   <div class="trails-new">
     <h1>Add a trail</h1>
-    <form class="flex-down" v-on:submit.prevent="createTrail()">
+    <form v-on:submit.prevent="createTrail()">
       <li>
         Name:
         <input type="text" v-model="newTrailParams.name" />
@@ -14,6 +14,7 @@
         Distance:
         <input type="text" v-model="newTrailParams.distance" />
       </li>
+      <input type="submit" value="Create" />
     </form>
   </div>
 </template>
