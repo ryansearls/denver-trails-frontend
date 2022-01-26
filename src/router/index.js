@@ -4,6 +4,7 @@ import Home from "../views/Home.vue";
 import TrailsNew from "../views/TrailsNew.vue";
 import TrailsIndex from "../views/TrailsIndex.vue";
 import TrailsShow from "../views/TrailsShow.vue";
+import TrailsEdit from "../views/TrailsEdit.vue";
 
 Vue.use(VueRouter);
 
@@ -35,6 +36,11 @@ const routes = [
     path: "/trails/:id",
     name: "trails-show",
     component: TrailsShow,
+  },
+  {
+    path: "/trails/:id/edit",
+    name: "trails-edit",
+    component: TrailsEdit,
   },
 ];
 
