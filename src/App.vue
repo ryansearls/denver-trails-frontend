@@ -8,6 +8,8 @@
       <router-link to="/trails/new">New Trail</router-link>
       |
       <router-link to="/trails">All Trails</router-link>
+      |
+      <router-link to="/signup">Signup</router-link>
     </div>
     <router-view />
   </div>

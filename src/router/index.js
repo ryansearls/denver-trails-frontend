@@ -5,6 +5,8 @@ import TrailsNew from "../views/TrailsNew.vue";
 import TrailsIndex from "../views/TrailsIndex.vue";
 import TrailsShow from "../views/TrailsShow.vue";
 import TrailsEdit from "../views/TrailsEdit.vue";
+import Signup from "../views/Signup.vue";
+
 
 Vue.use(VueRouter);
 
@@ -41,6 +43,11 @@ const routes = [
     path: "/trails/:id/edit",
     name: "trails-edit",
     component: TrailsEdit,
+  },
+  {
+    path: "/signup",
+    name: "signup",
+    component: Signup,
   },
 ];
 
