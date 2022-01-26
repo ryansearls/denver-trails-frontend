@@ -5,6 +5,7 @@
       <h2>Title: {{ trail.name }}</h2>
       <p>Location: {{ trail.location }}</p>
       <p>Distance: {{ trail.distance }}</p>
+      <router-link v-bind:to="`/trails/${trail.id}`">More details</router-link>
     </div>
   </div>
 </template>
