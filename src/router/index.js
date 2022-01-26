@@ -2,6 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import TrailsNew from "../views/TrailsNew.vue";
+import TrailsIndex from "../views/TrailsIndex.vue";
 
 Vue.use(VueRouter);
 
@@ -23,6 +24,11 @@ const routes = [
     path: "/trails/new",
     name: "trails-new",
     component: TrailsNew,
+  },
+  {
+    path: "/trails",
+    name: "trails-index",
+    component: TrailsIndex,
   },
 ];
 

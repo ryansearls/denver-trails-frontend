@@ -6,6 +6,8 @@
       <router-link to="/about">About</router-link>
       |
       <router-link to="/trails/new">New Trail</router-link>
+      |
+      <router-link to="/trails">All Trails</router-link>
     </div>
     <router-view />
   </div>
