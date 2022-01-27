@@ -26,6 +26,9 @@
       <div>
         <label>Password confirmation:</label>
         <input type="password" v-model="newUserParams.password_confirmation" />
+        <small v-if="newUserParams.password_confirmation !== newUserParams.password" class="text-danger">
+          Passwords Must Match
+        </small>
       </div>
       <input type="submit" value="Submit" />
     </form>
