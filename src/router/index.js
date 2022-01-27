@@ -6,6 +6,7 @@ import TrailsIndex from "../views/TrailsIndex.vue";
 import TrailsShow from "../views/TrailsShow.vue";
 import TrailsEdit from "../views/TrailsEdit.vue";
 import Signup from "../views/Signup.vue";
+import Login from "../views/Login.vue";
 
 
 Vue.use(VueRouter);
@@ -48,6 +49,11 @@ const routes = [
     path: "/signup",
     name: "signup",
     component: Signup,
+  },
+  {
+    path: "/login",
+    name: "login",
+    component: Login,
   },
 ];
 
