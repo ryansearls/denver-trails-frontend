@@ -2,6 +2,9 @@
   <div class="trails-new">
     <h1>Add a trail</h1>
     <form v-on:submit.prevent="createTrail()">
+      <ul>
+        <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
+      </ul>
       <li>
         Name:
         <input type="text" v-model="newTrailParams.name" />
