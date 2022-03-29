@@ -3,6 +3,7 @@
     <h1>{{ message }}</h1>
     <div v-for="trail in trails" :key="trail.id">
       <h2>Title: {{ trail.name }}</h2>
+      <span class="image main"><img :src="trail.image" alt="" /></span>
       <p>Location: {{ trail.location }}</p>
       <p>Distance: {{ trail.distance }}</p>
       <router-link v-bind:to="`/trails/${trail.id}`">More details</router-link>

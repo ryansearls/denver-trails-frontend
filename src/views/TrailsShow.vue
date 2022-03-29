@@ -1,7 +1,7 @@
 <template>
   <div class="trails-show">
     <h2>{{ trail.name }}</h2>
-    <!-- <img v-bind:src="trail.url" v-bind:alt="trail.name" /> -->
+    <img v-bind:src="trail.image" v-bind:alt="trail.name" />
     <p>Location: {{ trail.location }}</p>
     <p>Length: {{ trail.distance }}</p>
     <li>
