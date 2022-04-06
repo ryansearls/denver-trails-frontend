@@ -6,6 +6,10 @@
         <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
       </ul>
       <div>
+        <label>Image:</label>
+        <input type="text" v-model="currentTrailParams.image" />
+      </div>
+      <div>
         <label>Name:</label>
         <input type="text" v-model="currentTrailParams.name" />
       </div>
