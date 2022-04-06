@@ -18,12 +18,12 @@
         </div>
       </div>
     </div>
-    <div v-for="trail in trails" :key="trail.id">
+    <!-- <div v-for="trail in trails" :key="trail.id">
       <h2>Title: {{ trail.name }}</h2>
       <span class="image main"><img :src="trail.image" alt="" /></span>
       <p>Location: {{ trail.location }}</p>
       <p>Distance: {{ trail.distance }}</p>
-    </div>
+    </div> -->
   </div>
 </template>
 
