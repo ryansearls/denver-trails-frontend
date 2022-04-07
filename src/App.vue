@@ -37,14 +37,10 @@
               <a class="nav-link" href="/logout">Logout</a>
             </li>
           </ul>
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
         </div>
       </div>
     </nav>
-    <div id="nav">
+    <!-- <div id="nav">
       <router-link to="/">Home</router-link>
       |
       <router-link to="/about">About</router-link>
@@ -58,7 +54,7 @@
       <router-link to="/login">Login</router-link>
       |
       <router-link to="/logout">Logout</router-link>
-    </div>
+    </div> -->
     <router-view />
   </div>
 </template>
@@ -68,5 +64,9 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
     "Helvetica Neue", sans-serif;
   background-image: url("./assets/hip-square.png");
+}
+
+.collapse navbar-collapse {
+  text-align: center;
 }
 </style>
