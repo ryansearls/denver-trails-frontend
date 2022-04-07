@@ -4,11 +4,11 @@
     <img v-bind:src="trail.image" v-bind:alt="trail.name" />
     <p>Location: {{ trail.location }}</p>
     <p>Length: {{ trail.distance }}</p>
-    <li>
+    <li v-if="$parent.getUserId() == trail.user_id">
       <router-link v-bind:to="`/trails/${trail.id}/edit`"><button>Edit trail</button></router-link>
     </li>
-    <router-link to="/trails">Back to all trails</router-link>
     <p><button v-on:click="destroyTrail(trail)">Delete Trail</button></p>
+    <router-link to="/trails">Back to all trails</router-link>
   </div>
 </template>
 
