@@ -24,16 +24,16 @@
             <li class="nav-item">
               <a class="nav-link" href="/trails">Trails</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" v-if="isLoggedIn()">
               <a class="nav-link" href="/trails/new">Add Trail</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" v-if="!isLoggedIn()">
               <a class="nav-link" href="/signup">Signup</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" v-if="!isLoggedIn()">
               <a class="nav-link" href="/login">Login</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" v-if="isLoggedIn()">
               <a class="nav-link" href="/logout">Logout</a>
             </li>
           </ul>
@@ -65,8 +65,20 @@ body {
     "Helvetica Neue", sans-serif;
   background-image: url("./assets/hip-square.png");
 }
-
-.collapse navbar-collapse {
-  text-align: center;
-}
 </style>
+
+<script>
+// import axios from "axios";
+
+export default {
+  methods: {
+    isLoggedIn: function () {
+      if (localStorage.getItem("jwt")) {
+        return true;
+      } else {
+        return false;
+      }
+    },
+  },
+};
+</script>
