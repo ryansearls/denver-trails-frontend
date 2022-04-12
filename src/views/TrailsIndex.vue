@@ -38,7 +38,7 @@ import Vue2Filters from "vue2-filters";
 export default {
   data: function () {
     return {
-      message: "Explore Denver Trails",
+      message: "Explore Colorado Trails",
       trails: [],
       titleFilter: "",
     };
