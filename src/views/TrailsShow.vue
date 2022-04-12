@@ -7,7 +7,9 @@
     <li v-if="$parent.getUserId() == trail.user_id">
       <router-link v-bind:to="`/trails/${trail.id}/edit`"><button>Edit trail</button></router-link>
     </li>
-    <p><button v-on:click="destroyTrail(trail)">Delete Trail</button></p>
+    <li v-if="$parent.getUserId() == trail.user_id">
+      <p><button v-on:click="destroyTrail(trail)">Delete Trail</button></p>
+    </li>
     <router-link to="/trails">Back to all trails</router-link>
   </div>
 </template>
