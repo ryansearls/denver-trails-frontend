@@ -4,7 +4,7 @@
     Search by title:
     <input v-model="titleFilter" />
     <div class="row row-cols-1 row-cols-md-3 g-4">
-      <div class="col" v-for="trail in filterBy(trails, titleFilter, 'name')" :key="trail.id">
+      <div class="col" v-for="trail in filterBy(trails, titleFilter, 'name', 'location')" :key="trail.id">
         <div class="card h-100">
           <img :src="trail.image" class="card-img-top" alt="..." />
           <div class="card-body">
