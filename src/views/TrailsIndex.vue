@@ -1,7 +1,7 @@
 <template>
   <div class="trails-index">
     <h1>{{ message }}</h1>
-    Search by title:
+    Search:
     <input v-model="titleFilter" />
     <div class="row row-cols-1 row-cols-md-3 g-4">
       <div class="col" v-for="trail in filterBy(trails, titleFilter, 'name', 'location')" :key="trail.id">
