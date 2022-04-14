@@ -17,6 +17,10 @@
         Distance:
         <input type="text" v-model="newTrailParams.distance" />
       </li>
+      <li>
+        Image:
+        <input type="text" v-model="newTrailParams.image" />
+      </li>
       <input type="submit" value="Create" />
     </form>
   </div>
